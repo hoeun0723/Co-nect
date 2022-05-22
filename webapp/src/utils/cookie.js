@@ -16,11 +16,8 @@ export const getUserCookie = () => {
   const { img } = userInfo;
   return { ...userInfo, img: setDefaultProfileImage(img) };
 };
-<<<<<<< HEAD
 
 // export const getAuthCookie = () => cookies.get(AUTH_KEY);
-=======
->>>>>>> fa6a12ae010484d2036323ee77f4e12f45836740
 
 const removeCookie = (name) => cookies.remove(name);
 
