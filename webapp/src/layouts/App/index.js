@@ -24,11 +24,7 @@ import Callback from 'pages/Callback';
 import Navigation from 'components/Navigation';
 import EditUserProfile from 'pages/EditUserProfile';
 import EditTeamProfile from 'pages/EditTeamPost';
-<<<<<<< HEAD
 import MyUserList from 'pages/MyUserList';
-=======
-import UsersList from 'pages/UsersList';
->>>>>>> fa6a12ae010484d2036323ee77f4e12f45836740
 import NewPost from 'pages/NewTeamPost';
 import MyPost from 'pages/MyPost';
 import WindowModal from 'components/WindowModal';
