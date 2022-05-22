@@ -13,5 +13,9 @@ export const OAUTH_URL = {
 };
 
 export const ROOT_URL = process.env.REACT_APP_SERVER_API;
+<<<<<<< HEAD
 
 export const MOCK_SERVER_URL = process.env.REACT_APP_MOCK_SERVER_API;
+=======
+console.log(ROOT_URL);
+>>>>>>> fa6a12ae010484d2036323ee77f4e12f45836740

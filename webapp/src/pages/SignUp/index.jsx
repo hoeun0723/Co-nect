@@ -53,8 +53,12 @@ function SignUp() {
     const {
       payload: { status, code, data, message },
     } = await dispatch(handleSignUp(signUpInfo));
+<<<<<<< HEAD
+=======
+    console.log(123123123);
+>>>>>>> fa6a12ae010484d2036323ee77f4e12f45836740
     if (isStatusOk(status)) {
-      navigate('/login');
+      // navigate('/login');
     }
   };
   return (

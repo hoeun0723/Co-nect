@@ -28,7 +28,11 @@ function Login() {
     } = await dispatch(handleLogin(submitData));
     if (status && isStatusOk(status)) {
       navigate('/');
+<<<<<<< HEAD
       window.location.reload();
+=======
+      // window.location.reload();
+>>>>>>> fa6a12ae010484d2036323ee77f4e12f45836740
     }
   };
   return (
