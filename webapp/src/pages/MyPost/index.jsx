@@ -1,34 +1,20 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import { CardTitle, CardWrapper, ImgContainer } from './style';
+import userApi from 'api/user.api';
+import { ROUTE } from 'constant/route.constant';
+import { emptyTrigger } from 'constant/service.constant';
+import WithInfiniteScroll from 'hoc/WithInfiniteScroll';
+import UserCard from 'components/UserCard';
+import * as S from './MyPost.style';
 
-function MyPost() {
-  const my_posting = [
-    {
-      team_id: 1,
-      name: '코넥트',
-      like_cnt: 0,
-    },
-    {
-      team_id: 2,
-      name: '애플팀플',
-      like_cnt: 1,
-    },
-  ];
+export default function MyPost() {
   return (
-    <div>
-      {my_posting.map((posting) => (
-        <CardWrapper>
-          <h1>{posting.team_id}</h1>
-          <CardTitle>{posting.name}</CardTitle>
-          <ImgContainer>
-            <img alt="팀 사진" />
-          </ImgContainer>
-          <span>{posting.like_cnt}</span>
-        </CardWrapper>
-      ))}
-    </div>
+    <S.Container>
+      <WithInfiniteScroll
+        CardComponent={UserCard}
+        clickLink={`${ROUTE.USER}/`}
+        axiosInstance={userApi.GET_MY_POSTS}
+        emptyTrigger={emptyTrigger.user}
+      />
+    </S.Container>
   );
 }
-
-export default MyPost;
